@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/stylesheet5.css">
+    <title>Projects</title>
+</head>
+<header>
+    <a href="index.html"><img class="h-logo" src="img/header-logo.png" alt="Logo"></a>
+</header>
+<body>
+    <h1 class="main-header">Gallery</h1>
+    <h1 class="project-header">Project Dupont</h1>
+<div class="gallery-container">
+    <div class="project">
+        <img src="img/project-dupont.jpg" alt="Project Image 1" onclick="openModal(this)">
+    </div>
+    <div class="project">
+        <img src="img/project-garage.jpg" alt="Project Image 2" onclick="openModal(this)">
+    </div>
+    <div class="project">
+        <img src="img/project-italiante.jpeg" alt="Project Image 3" onclick="openModal(this)">
+    </div>
+</div>
+<!-- Modal -->
+<div id="myModal" class="modal">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <div class="modal-content">
+        <img id="modalImg" src="" alt="Large Image">
+    </div>
+</div>
+
+<script>
+    function openModal(element) {
+        var modal = document.getElementById("myModal");
+        var modalImg = document.getElementById("modalImg");
+        modal.style.display = "flex";
+        modalImg.src = element.src;
+    }
+
+    function closeModal() {
+        var modal = document.getElementById("myModal");
+        modal.style.display = "none";
+    }
+
+    // Closes modal when clicking outside of the image
+    window.onclick = function(event) {
+        var modal = document.getElementById("myModal");
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+</script>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const elements = document.querySelectorAll('h1, .content1, .content2, .h-logo, .gallery-container');
+        elements.forEach((element, index) => {
+            setTimeout(() => {
+                element.classList.add('fade-in');
+            }, index * 500); // Staggers the animations by 0.5 seconds
+        });
+    });
+</script>
+</body>
+</html>

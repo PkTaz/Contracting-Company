@@ -1,0 +1,349 @@
+body {
+    margin: 0;
+    background-image: url('../img/background.jpg'); /* Replace with your image path */
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+}
+
+.h-logo {
+    width: 35%;
+    height: auto;
+    position: relative;
+    right: -55%;  /* Start off-screen to the left */
+    opacity: 0;   /* Start hidden */
+    transition: right 0.1s ease-in-out, opacity 0.3s ease-in-out;
+    margin-bottom: 5%;
+}
+
+.h-logo.show {
+    right: 1%;
+    transform: translateX(-10%);
+    opacity: 1;   /* Fade in */
+}
+
+.custom-nav-list {
+    position: absolute;
+    list-style-type: none;
+    display: flex;
+    font-size: 36px;
+    margin: 0;
+    margin-left: 45%;
+}
+
+.custom-nav-list li {
+    margin: 10px 25px; /* Adjust the spacing between list items as needed */
+    white-space: nowrap; /* Prevent text from wrapping */
+    display: inline-block;
+}
+
+.nav-button {
+    border: 2px solid white;
+    background-color: transparent;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 4px;
+    font-size: 32px;
+    cursor: pointer;
+    transition: transform 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+    text-decoration: none;
+    font-family: "Josefin Sans", sans-serif;
+}
+
+.nav-button:hover {
+    transform: scale(1.1);
+    border-color: rgb(247, 230, 161);
+    color: #f5ad58;
+    background-color: rgba(38, 73, 70, 0.5);
+}
+
+a {
+    text-decoration: none;
+}
+.bg-body-color {
+background-color: rgba(38, 73, 70, 0.8);
+background-size: cover;
+width: 100%;
+height: 100%;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.hauser-img, h1, .content1, .number, .custom-button, h2, .services-section {
+    opacity: 0; /* Start hidden */
+    animation: fadeIn 0.8s ease-in-out forwards; /* Apply fade-in animation */
+}
+
+.hauser-img {
+    margin-top: 7%;
+    margin-left: 5%;
+    width: 35%;
+    height: 25%;
+    animation-delay: 0.6s; /* Optional: Add delay for staggered fade-in */
+}
+
+h1 {
+    position: absolute;
+    margin-top: 4%;
+    margin-left: 48%;
+    color: #f5ad58;
+    font-family: "Josefin Sans", sans-serif;
+    animation-delay: 0.3s; /* Optional: Add delay for staggered fade-in */
+}
+
+.content1 {
+    color: rgb(247, 230, 161);
+    text-align: center;
+    font-size: 32px;
+    margin-top: 8%;
+    position: absolute;
+    margin-left: 48%;
+    margin-right: 5%;
+    font-family: "Josefin Sans", sans-serif;
+    animation-delay: 0.5s; /* Optional: Add delay for staggered fade-in */
+}
+
+.number {
+    color: #f5ad58;
+    font-size: 36px;
+    margin-top: 23%;
+    position: absolute;
+    margin-left: 65%;
+    animation-delay: 0.7s; /* Optional: Add delay for staggered fade-in */
+}
+
+.custom-button {
+    position: absolute;
+    margin-left: 66.5%;
+    margin-top: 27%;
+    display: inline-block;
+    padding: 10px 20px;
+    border: 2px solid white;
+    border-radius: 5px;
+    text-decoration: none;
+    color: white;
+    font-size: 1.5rem;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+    animation-delay: 0.9s; /* Optional: Add delay for staggered fade-in */
+}
+
+.custom-button:hover {
+    border-color: rgb(247, 230, 161);
+    transform: scale(1.1);
+}
+
+.custom-button span {
+    display: inline-block;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.custom-button:hover span {
+    color: #f5ad58;
+    transform: scale(1.1);
+}
+
+h2 {
+    margin-top: 5%;
+    font-size: 48px;
+    color: #f5ad58;
+    margin-left: 43%;
+    font-family: "Josefin Sans", sans-serif;
+    animation-delay: 1.0s;
+}
+
+.services-wrapper {
+    background-color: rgba(38, 73, 70, 0.8); /* Same green background */
+    border-radius: 10px;
+}
+
+.services-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    animation-delay: 1.0s;
+}
+
+.service {
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 15px;
+    padding: 20px;
+    width: 30%;
+    text-align: center;
+    animation-delay: 1.0s;
+}
+
+
+.service h3 {
+    color: #264946;
+    font-size: 24px;
+    font-family: "Josefin Sans", sans-serif;
+    margin-bottom: 10px;
+    animation-delay: 1.0s;
+}
+
+.service p {
+    color: #264946;
+    font-size: 18px;
+    font-family: "Josefin Sans", sans-serif;
+    animation-delay: 1.0s;
+}
+
+.site-footer {
+    background-color: rgba(38, 73, 70, 0.8);
+    padding: 30px 0;
+    color: rgb(247, 230, 161);
+    font-family: "Josefin Sans", sans-serif;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-left: 10%;
+}
+
+.footer-section {
+    flex: 1;
+    padding: 20px;
+    min-width: 200px;
+}
+
+.footer-section h3 {
+    color: #f5ad58;
+    margin-bottom: 20px;
+    font-size: 32px;
+}
+
+.footer-section p,
+.footer-section ul {
+    color: rgb(247, 230, 161);
+    font-size: 18px;
+}
+
+.footer-section ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+    color: rgb(247, 230, 161);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-section ul li a:hover {
+    color: #f5ad58;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding: 10px 0;
+    background-color: rgba(38, 73, 70, 1); /* Darker background for the bottom part */
+    color: rgb(247, 230, 161);
+    font-size: 16px;
+    margin-top: 20px;
+}
+
+a {
+    color:  rgb(247, 230, 161);
+    font-family: "Josefin Sans", sans-serif;
+}
+
+a:hover {
+    color: #f5ad58;
+    text-decoration: underline;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+    header {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .custom-nav-list {
+        margin-left: 0;
+        font-size: 24px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .custom-nav-list li {
+        margin: 10px 0;
+    }
+
+    .h-logo {
+        width: 50%;
+        right: 0;
+        margin-bottom: 10%;
+    }
+
+    .h-logo.show {
+        transform: translateX(0);
+        right: 10%;
+    }
+
+    .content1, .number, .custom-button {
+        position: relative;
+        margin-left: 0;
+        margin-right: 0;
+        font-size: 24px;
+    }
+
+    .content1 {
+        font-size: 24px;
+        margin-top: 10%;
+    }
+
+    .number {
+        font-size: 24px;
+        margin-top: 15%;
+    }
+
+    .custom-button {
+        font-size: 1rem;
+        margin-left: 0;
+        margin-top: 20%;
+    }
+
+    h1, h2 {
+        font-size: 36px;
+        margin-left: 0;
+        text-align: center;
+    }
+
+    .services-section {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .service {
+        width: 80%;
+        margin: 15px 0;
+    }
+
+    .footer-container {
+        margin-left: 0;
+    }
+}

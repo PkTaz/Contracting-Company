@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About New Hue Restoration</title>
+    <link rel="stylesheet" href="css/stylesheet2.css">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100..700&display=swap" rel="stylesheet">
+</head>
+<header>
+    <a href="index.html"><img class="h-logo" src="img/header-logo.png" alt="Logo"></a>
+</header>
+<body>
+    <h1>Who Are We?</h1>
+    <p class="content1">New Hue Restoration + Design, LLC is a full service design studio & licensed building firm, 
+        with a focus on preservation and revitalization of historic structures. 
+        NHR+D aims for every project to reflect our fascination with the historic built environment, 
+        and our expertise for people focused spaces. NHR+D team is multi-faceted, 
+        and continues to prove excellent craft and thoughtful design with every project. 
+        Our team prides itself on its client relationships, and a mission to provide inspiring architectural design. 
+        This attention to client desires, project personalization, 
+        and management, allows for successful projects to occur.
+    </p>
+    <p class="content2">
+        Our dedication to the meticulousness of construction documents, 
+        and to the labor and craft in the field, 
+        make us strive for every project to be fluid and effectively productive. 
+        As a company with room to grow, our mission is to maintain what has made us successful so far; 
+        providing clients with happier, healthier, and rewarding projects. From adaptive reuse, to new construction, 
+        New Hue Restoration + Design, LLC is a company devoted to progression in architecture, 
+        and exploring the potential in existing structures.
+    </p>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const elements = document.querySelectorAll('h1, .content1, .content2');
+            elements.forEach((element, index) => {
+                setTimeout(() => {
+                    element.classList.add('fade-in');
+                }, index * 500); // Stagger the animations by 0.5 seconds
+            });
+        });
+    </script>
+</body>
